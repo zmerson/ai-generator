@@ -2,6 +2,12 @@ import torch
 from transformers import pipeline
 import sys
 
+
+print("PREFIX:")
+print(sys.prefix)
+print("PATH:")
+print(sys.path)
+print("---")
 model_name= sys.argv[1]
 prompt = sys.argv[2]
 qa_pipeline = pipeline("question-answering", model=model_name)
